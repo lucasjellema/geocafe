@@ -9,7 +9,8 @@ In the Geo Cafe we look at tools for visualizing geo data - including Datawrappe
   - [3. Google MyMaps, Mapshaper \& GeoJSON.io](#3-google-mymaps-mapshaper--geojsonio)
     - [Export to KML, Import in Data Wrapper](#export-to-kml-import-in-data-wrapper)
     - [MapShaper for Conversion, Analysis and Manipulation](#mapshaper-for-conversion-analysis-and-manipulation)
-    - [John Snow's Cholera Incidents in London](#john-snows-cholera-incidents-in-london)
+    - [geojson.io](#geojsonio)
+    - [John Snow's Cholera Incidents in London in MyMaps](#john-snows-cholera-incidents-in-london-in-mymaps)
   - [4. Browse Public Geo Datasets](#4-browse-public-geo-datasets)
   - [5. QGIS - first steps](#5-qgis---first-steps)
   - [6. Playing with FotoMapp](#6-playing-with-fotomapp)
@@ -227,9 +228,26 @@ Each of these file types can be processed in different tools.
 
 From the Mapshaper Console, you can further query and manipulate the data. See [documentation](https://github.com/mbloch/mapshaper/blob/master/REFERENCE.md) for details. Commands include affine, classify, clip, clean, dissolve, divide, drop, filter, join, merge, create points such as centroids, simplify, snap, split and more.
 
+### geojson.io
+Let's export the geo data in GeoJSON format and further work on it in geojson.io.
 
+Click on Export. Select GeoJSON as file format. Select *save to clipboard*. 
+![](images/mapshaper-export-geojson.png)
+Then click *Export*.
 
-### John Snow's Cholera Incidents in London
+Go to [geojson.io]()
+
+![](images/.geojson-new.png)
+
+Click in the </>JSON tab. Select all content and remove. Then paste the contents from the clipboard.
+![](images/geojson-afterpaste.png)
+
+You can edit, add more data, export in various formats, add GeoJSON features of different types (polyline, polygon, circle, rectangle), click on markers to edit their properties and more.
+![](images/geojson-edit-marker-properties.png)
+
+### John Snow's Cholera Incidents in London in MyMaps
+
+Using the KML file for John Snow's findings prepared by [Robin Wilson](https://blog.rtwilson.com/), we will now create a map of that data in MyMaps.
 
 Return to [MyMaps](https://www.google.com/maps/d/). Create a new map.
 
