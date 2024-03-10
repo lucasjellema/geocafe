@@ -1,6 +1,25 @@
 # Geo Cafe - exploring geo data and tools & technologies for working with it
 
 In the Geo Cafe we look at tools for visualizing geo data - including Datawrapper anm Google MyMaps, for creating and manipulating geo data - such as geojson.io, mapshaper and mapwarper - and at a tool for doing most of that as well as analyzing geo data: QGIS. We discuss geo data formats and public geo datasets. We end with a look at Leaflet, a JavaScript library for integrating real world interactive maps in web applications.
+- [Geo Cafe - exploring geo data and tools \& technologies for working with it](#geo-cafe---exploring-geo-data-and-tools--technologies-for-working-with-it)
+  - [1. Datawrapper - Chloropleth map](#1-datawrapper---chloropleth-map)
+    - [Recreate the Map for Area instead of Preference](#recreate-the-map-for-area-instead-of-preference)
+  - [2. Datawrapper - Locator Map](#2-datawrapper---locator-map)
+    - [Adding More Visual Clues to the Locator Map](#adding-more-visual-clues-to-the-locator-map)
+  - [3. Google MyMaps, Mapshaper \& GeoJSON.io](#3-google-mymaps-mapshaper--geojsonio)
+    - [Export to KML, Import in Data Wrapper](#export-to-kml-import-in-data-wrapper)
+    - [MapShaper for Conversion, Analysis and Manipulation](#mapshaper-for-conversion-analysis-and-manipulation)
+    - [John Snow's Cholera Incidents in London](#john-snows-cholera-incidents-in-london)
+  - [4. Browse Public Geo Datasets](#4-browse-public-geo-datasets)
+  - [5. QGIS - first steps](#5-qgis---first-steps)
+  - [6. Playing with FotoMapp](#6-playing-with-fotomapp)
+  - [7. First steps with Leaflet - integrating a map in a web application](#7-first-steps-with-leaflet---integrating-a-map-in-a-web-application)
+    - [HTML - the structure and markup of the web page:](#html---the-structure-and-markup-of-the-web-page)
+    - [CSS: the styles (colors, sizes, fonts) of the objects in the page](#css-the-styles-colors-sizes-fonts-of-the-objects-in-the-page)
+    - [JavaScript: the code to actually create and initialize the map](#javascript-the-code-to-actually-create-and-initialize-the-map)
+    - [Add Markers](#add-markers)
+    - [Bonus: Add WARPed Map](#bonus-add-warped-map)
+
 
 ## 1. Datawrapper - Chloropleth map
 
