@@ -107,10 +107,129 @@ The result will look something like this:
 
 ## 3. Google MyMaps, Mapshaper & GeoJSON.io
 
+To use Google MyMaps, you will need a Google account. If you have one, go to [MyMaps](https://www.google.com/maps/d/). Create a new map.
+![](images/mymaps-newmap.png)
+
+Acknowledge the message:
+![](images/mymaps-message.png)
+and click on create.
+
+Edit the title of the map. Change it to for example "Dutch Sport Locations".
+
+Click on import. Upload the file `dutch-sport-locations.csv` from the data files folder.
+
+Select the `Address` column as the one to derive the geo coordinates from - using Geo Coding. Click Continue.
+
+Select the `Stadium` column as the title for the markers. Click Finish.
+
+The data from the csv file is processed. Addresses are geo coded and markers are put on the map for each of the records in the csv file. Click a marker to inspect its properties.
+
+Click on *Uniform Style* in the layer definition. Click on Style by Column Definition and select column Capacity. Define 4 ranges - or any other number - and select the color palette. You may want to add labels as well. The markers on the map are now colored based on the stadium's capacity. If you want to organize a tournament, it is easy to find the accomodations that hold the largest crowds.
+
+
+Click on Add Layer. 
+
+![](images/mymaps-addlayer.png)
+For the new, as yet untitled layer, click on import. 
+
+![](images/mymaps-importfornewlayer.png)
+
+Upload the data file `dutch_keukenkampioen_divisie_stadiums.csv` . Select `Stadium Name` as the column to use for determining the coordinates. (yes, Google can do geocoding based on the name of the stadium). New markers are added to the map for this new layer:
+
+![](images/mymaps-1edivisielayer-and-style.png)
+Click on the little paint can icon for All Items in the new layer.
+
+Select a color for the markers in this layer.
+![](images/mymaps-style.png)
+Then press *More icons* and select a suitable icon for these markers. Then Click OK.
+
+The map should now look something like this:
+![](images/mymaps-finalmap.png)
+
+Note: you can easily decide to show and hide layers.
+
+Note: you can choose the style of the base map. For example to hide features or accentuate others.
+![](images/mymaps-baselayer.png)
+
+You can now publish and share your map. You can access the map I created at [this link](https://www.google.com/maps/d/edit?mid=1R4Q-1_4Paj4XXVWo1Rp3HQKV-8rNkmw&usp=sharing)
+It looks like this:
+![](images/mymaps-published.png)
+
+### Export to KML, Import in Data Wrapper
+
+You can also export the data collected in the map as KML/KMZ file.
+![](images/mymaps-exportkml.png)
+
+The MyMaps menu support *Export to KML/KMZ*. However, it turns out that this file does not contain the geocoordinates that were produced using geocoding.
+
+In order to get a KML file that has the proper coorindates, we need an intermediate step. Pick the option *View in Google Earth*.
+![](images/mymaps-openinEarth.png)
+
+
+Google Earth opens and the markers are shown. Click on a marker to find the information on the stadium in tact.
+![](images/mymaps-exportkml.png)
+
+Click on the three vertical dots next to the map name and select *Export as KML file* - or use the *File* menu. Save the KML file.
+
+We can use this file without conversion in Data Wrapper to create a Locator map. Just like before, go to [Data Wrapper](https://www.datawrapper.de/maps), select Locator map as the type of map to create and import the KML file on the first step, *Add Markers*. 
+![](images/datawrapper-import-kml.png)
+
+After the file has been imported, the markers will show up - along with some meaningful meta data, including coloring and label:
+![](images/datawrapper-locatormapfromKML.png)
+
+
+### MapShaper for Conversion, Analysis and Manipulation
+
+We can use the site *MapShaper* to do some further work on the KML file - for example convert the data to GeoJSON format or combine the data with other files in different format. Or analyze, visualize and manipulate.
+
+Navigate to [mapshaper.org](https://mapshaper.org/).
+
+Click on *Select* to open the file browse and select dialog. Select the KML file exported from Google Earth.
+
+![](images/mapshaper-selectfile.png)
+
+Click on *Import*.
+
+What you will see on the screen may not look impressive. A number of dots. These however represent geo locations and a set of associated data.
+![](images/mapshaper-addbasemap.png)
+
+If we add a base map, things will start to look a little bit better. Click on *Basemap*. Click on *Satellite* and on *Fade*. The result is:
+![](images/mapshaper-withbasemap.png)
+
+You can zoom and pan the display. However, *mapshaper* is not primarily a visualization tool.It is intended to wrangle geo data sets and export them in desired formats. 
+
+Click on the Arrow icon in the toolbar on the right hand side. Enable *Inspect Feature*. Click on any marker on the map to see the details for the feature.
+![](images/mapshaper-inspectfeature.png)
+
+Using the Export menu, you can download the geo data in desired formats or paste data to the clipboard.
+![](images/mapshaper-export.png)
+
+Each of these file types can be processed in different tools.
+
+From the Mapshaper Console, you can further query and manipulate the data. See [documentation](https://github.com/mbloch/mapshaper/blob/master/REFERENCE.md) for details. Commands include affine, classify, clip, clean, dissolve, divide, drop, filter, join, merge, create points such as centroids, simplify, snap, split and more.
+
+
+
+### John Snow's Cholera Incidents in London
+
+Return to [MyMaps](https://www.google.com/maps/d/). Create a new map.
+
+Import the data file pumps.kml from the `datafiles/john-snow` directory. Open the *Base Map* drop down and select the Light Landmass basemap. The map now looks like this:
+![](images/mymaps-pumps.png)
+
+Create a new layer and import the data file `cholera-deaths.kml` from the `datafiles/john-snow` directory. 
+
+Here is what the map with the two layers looks like:
+![](images/mymaps-pumps-and-deaths.png)
+
+The pump that was identified as the source of the break out can hardly be seen because of the death markers. Something John Snow spotted and interpreted correctly.
+
 
 ## 4. Browse Public Geo Datasets
 
 Check out websites
+
+The Open Data Network - https://www.opendatanetwork.com/ - portal to find datasets from among 10Ks of public open data sets.
 
 GISCO - the Geographic Information System of the COmmission - localise, analyse, visualise: https://ec.europa.eu/eurostat/web/gisco/geodata/reference-data . Within Eurostat, GISCO is responsible for meeting the European Commission's geographical information needs at 3 levels: the European Union, its member countries, and its regions.
 
