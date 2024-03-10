@@ -135,14 +135,20 @@ Acknowledge the message:
 and click on create.
 
 Edit the title of the map. Change it to for example "Dutch Sport Locations".
+![](images/mymaps-editname.png)
 
 Click on import. Upload the file `dutch-sport-locations.csv` from the data files folder.
+![](images/mymaps-import.png)
 
 Select the `Address` column as the one to derive the geo coordinates from - using Geo Coding. Click Continue.
+![](images/mymaps-selectaddress.png)
 
 Select the `Stadium` column as the title for the markers. Click Finish.
+![](images/mymaps-selectlabel-finish.png)
 
 The data from the csv file is processed. Addresses are geo coded and markers are put on the map for each of the records in the csv file. Click a marker to inspect its properties.
+
+![](images/mymaps-firstmap.png)
 
 Click on *Uniform Style* in the layer definition. Click on Style by Column Definition and select column Capacity. Define 4 ranges - or any other number - and select the color palette. You may want to add labels as well. The markers on the map are now colored based on the stadium's capacity. If you want to organize a tournament, it is easy to find the accomodations that hold the largest crowds.
 
