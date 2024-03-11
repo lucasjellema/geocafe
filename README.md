@@ -301,11 +301,13 @@ Visualize in Datawrapper or MyMaps
 
 ## 5. QGIS - first steps
 
+Follow the steps in [this article](https://technology.amis.nl/data-analytics/quickly-creating-a-geo-map-to-illustrate-an-article-qgis-and-datawrapper-and-the-pdok-data-sets/) to quickly create a geo-map illustration while demonstrating PDOK as geo data source, QGIS as geo data inspector and editor and Datawrapper to create the actual map. This one that shows the train stations in the province of Utrecht.
 
 
 ## 6. Playing with FotoMapp
 
-Trying out https://lucasjellema.github.io/foto-map/ 
+Open FotoMapp at: https://lucasjellema.github.io/foto-map/ 
+
 
 Upload images
 Click to create markers
