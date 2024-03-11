@@ -310,31 +310,31 @@ Open FotoMapp at: https://lucasjellema.github.io/foto-map/
 
 Feel free to upload any of your own images. Make sure that they contain GPS information - otherwise the images are ignored by FotoMapp.
 
-Alternatively, use the provided images in the 
+Alternatively, use the provided images in the folder datafiles/photographs-with-location. You can click on the paperclip icon, select all images in this folder and upload them in a single action. After a little while, when the images have been reverse geocoded, you press the Resfresh Map button and you will see something similar to:
 
-Upload images
 ![](images/fotomapp-afterupload.png)
 
-Click to create markers
-Click on marker - inspect popup
-Paste GeoJSON
+Click on a marker to find details about the location and to view the photograph that was taken at that location.
 
-Copy GeoJSON (and paste in geojson.io or in Datawrapper)
-Copy as Image
 
-Filter by date
-Clustering of closely located markers
-Consolidate markers (check out the caroussel in the popup)
+Some things to try out:
 
-Edit mode:
-Click to add marker
-Drag Marker
-Edit Marker/Site/Tooltip
+* Click to create markers
+* Paste GeoJSON
 
+* Copy (Map as) GeoJSON (and paste in geojson.io or in Datawrapper) - use right mouse click on map
+* Copy as Image - use right mouse click on map
+
+* Filter by date range - use right mouse click on map, select Show Filters and then configure filter
+* Clustering of closely located markers - check the Enable Clustering checkbox in the left bottom corner
+
+Edit mode - check the Edit Mode checkbox in the left bottom corner:
+* Double Click to add marker
+* Drag Marker
+* Delete Marker (and Site)
+* Edit Marker/Site/Tooltip - click on marker to bring up editor
 
 Add custom map layer of tiled map service, for example of WARP-ed images/maps such as https://mapwarper.net/maps/tile/80272/{z}/{x}/{y}.png
-
-
 
 
 ## 7. First steps with Leaflet - integrating a map in a web application
