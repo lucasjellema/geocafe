@@ -12,6 +12,7 @@ In the Geo Cafe we look at tools for visualizing geo data - including Datawrappe
     - [geojson.io](#geojsonio)
     - [John Snow's Cholera Incidents in London in MyMaps](#john-snows-cholera-incidents-in-london-in-mymaps)
   - [4. Browse Public Geo Datasets](#4-browse-public-geo-datasets)
+    - [Quick trip through a public open data set with geo aspects](#quick-trip-through-a-public-open-data-set-with-geo-aspects)
   - [5. QGIS - first steps](#5-qgis---first-steps)
   - [6. Playing with FotoMapp](#6-playing-with-fotomapp)
   - [7. First steps with Leaflet - integrating a map in a web application](#7-first-steps-with-leaflet---integrating-a-map-in-a-web-application)
@@ -270,34 +271,53 @@ The pump that was identified as the source of the break out can hardly be seen b
 
 ## 4. Browse Public Geo Datasets
 
+Geo Data is available as Open Data from a large number of sources. Most countries and regional organizations have statistical agencies that make many data sets available. Most have data that is related to countries, areas or cities and can easily be visualized on a map - location/point map or symbol map or more frequently: a chloropleth map. Most of this data is provided in CSV or JSON format (sometimes XML and occasionally GeoJSON). 
+
+Some agencies and website also provide vector and raster maps - visualizations of geographical phenomena or objects. This data can come in Shapefiles, WMS/WTS, GeoJSON, KML/KMZ, GeoTiff or other formats. Using mapshaper or QGIS you will be able to make most formats work for you.  
+
+You may want to take a look at some of these web sites where geo related data if offered:
 Check out websites
 
-The Open Data Network - https://www.opendatanetwork.com/ - portal to find datasets from among 10Ks of public open data sets.
-
-GISCO - the Geographic Information System of the COmmission - localise, analyse, visualise: https://ec.europa.eu/eurostat/web/gisco/geodata/reference-data . Within Eurostat, GISCO is responsible for meeting the European Commission's geographical information needs at 3 levels: the European Union, its member countries, and its regions.
-
-The PDOK Viewer - Dutch open government data with current geo-information: Bij PDOK vind je open datasets van de overheid met actuele geo-informatie. Deze datasets zijn benaderbaar via geo webservices en beschikbaar als downloads. https://app.pdok.nl/viewer
-
-UNdata - https://data.un.org/ - a world of information - data sets from United Nations on population, refugees, economy, education, labor, trade, energy, crime, health, science, environment, communication, transport and tourism.
-
-Natural Earth is a public domain map dataset available at 1:10m, 1:50m, and 1:110 million scales. Featuring tightly integrated vector and raster data, with Natural Earth you can make a variety of visually pleasing, well-crafted maps with cartography or GIS software. Both vector (Shapefiles) and raster (TIFF) files.   https://www.naturalearthdata.com/
-Some examples: countries, regions, cities, parks, administrative units. And: Coastline, rivers, reefs, bathymetry (deepness). Raster: elevation, bathymetry, gray-tone, relief, natural earth.
-
-Copernicus - Satellite imagery available as raster (WMS/WMTS) - https://www.copernicus.eu/en/accessing-data-where-and-how/copernicus-services-catalogue -  
-
-Worldbank Data Catalog - https://datacatalog.worldbank.org/home 
-
-NASA EarthData - https://www.earthdata.nasa.gov/
-
-GADM maps and data - provides maps and spatial data for all countries and their sub-divisions. https://gadm.org/data.html (GeoJSON, Shapefile,KMZ data files with boundaries of administrative units)
+* The Open Data Network - https://www.opendatanetwork.com/ - portal to find datasets from among 10Ks of public open data sets.
+* GISCO - the Geographic Information System of the COmmission - localise, analyse, visualise: https://ec.europa.eu/eurostat/web/gisco/geodata/reference-data . Within Eurostat, GISCO is responsible for meeting the European Commission's geographical information needs at 3 levels: the European Union, its member countries, and its regions.
+* PDOK - Dutch open government data with current geo-information: Bij PDOK vind je open datasets van de overheid met actuele geo-informatie. Deze datasets zijn benaderbaar via geo webservices en beschikbaar als downloads. https://app.pdok.nl/viewer
+* UNdata - https://data.un.org/ - a world of information - data sets from United Nations on population, refugees, economy, education, labor, trade, energy, crime, health, science, environment, communication, transport and tourism.
+* Natural Earth is a public domain map dataset available at 1:10m, 1:50m, and 1:110 million scales. Featuring tightly integrated vector and raster data, with Natural Earth you can make a variety of visually pleasing, well-crafted maps with cartography or GIS software. Both vector (Shapefiles) and raster (TIFF) files.   https://www.naturalearthdata.com/ Some examples: countries, regions, cities, parks, administrative units. And: Coastline, rivers, reefs, bathymetry (deepness). Raster: elevation, bathymetry, gray-tone, relief, natural earth.
+* Copernicus - Satellite imagery available as raster (WMS/WMTS) - https://www.copernicus.eu/en/accessing-data-where-and-how/copernicus-services-catalogue -  
+* Worldbank Data Catalog - https://datacatalog.worldbank.org/home 
+* NASA EarthData - https://www.earthdata.nasa.gov/
+* GADM maps and data - provides maps and spatial data for all countries and their sub-divisions. https://gadm.org/data.html (GeoJSON, Shapefile,KMZ data files with boundaries of administrative units)
 
 
+### Quick trip through a public open data set with geo aspects
 
-Download a particular data set
-Check and Shape (and combine?) with mapshaper? 
-Visualize in Datawrapper or MyMaps
+Let's try to work with one of these data sets. Just to give you a first impression. 
 
+Open your browser at [The World Bank](https://data.worldbank.org/indicator/SP.POP.TOTL). You will see data on population. 
+![](images/public-data-sets-worldbank-population.png)
+Click on the icon for Data Bank.
 
+You will be taken to a new page where the data underlying the graph is presented in a grid. Uncheck all Time checkboxes except for the most recent year. Then click on Download Options | CSV.
+
+![](images/public-data-sets-worldbank-download.png)
+
+A zip file is downloaded with two csv files. We are interested in the one whose name ends with `_Data.csv`. Extract it from the zip file. We will be using it in Datawrapper.
+
+Go to [Datawrapper](https://app.datawrapper.de/select/map). Select *Chloropleth Map*. Select (or rather accept because it is the default) *World* for the (base) map to use. Click on proceed. Now click on *Upload File*:
+![](images/public-data-sets-datawrapper-upload.png)
+
+Upload the csv file you had extracted from the zip file moments ago. 
+
+Check on Match tab if Data Wrapper made the right match between the countries in the world map and the records in the CSV file.
+![](images/public-data-sets-match.png)
+
+The match was probably okay. If not, fix the the mapping. Then click on *Proceed*.
+
+You may want to tinker with the visualization. The most important thing: in just a few steps you have taken a publicly available data set and visualized the data in chloropleth map that you can now publish, embed, share etcetera.
+
+![](images/public-data-sets-datawrapper-visualize.png)
+
+In the next lab - with QGIS - you use a public data set from PDOK with information about rail infrastructure. Just another example. There are thousands upon thousands of data sets available.
 
 ## 5. QGIS - first steps
 
