@@ -339,8 +339,7 @@ Click on a marker to find details about the location and to view the photograph 
 
 Some things to try out:
 
-* Click to create markers
-* Paste GeoJSON
+* Paste GeoJSON (or Geo coordinates copied from Google Maps) on the map to create markers in the specified location(s)
 
 * Copy (Map as) GeoJSON (and paste in geojson.io or in Datawrapper) - use right mouse click on map
 * Copy as Image - use right mouse click on map
