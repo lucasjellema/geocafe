@@ -308,8 +308,13 @@ Follow the steps in [this article](https://technology.amis.nl/data-analytics/qui
 
 Open FotoMapp at: https://lucasjellema.github.io/foto-map/ 
 
+Feel free to upload any of your own images. Make sure that they contain GPS information - otherwise the images are ignored by FotoMapp.
+
+Alternatively, use the provided images in the 
 
 Upload images
+![](images/fotomapp-afterupload.png)
+
 Click to create markers
 Click on marker - inspect popup
 Paste GeoJSON
