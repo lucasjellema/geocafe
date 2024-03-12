@@ -29,7 +29,7 @@ Using CSV file with geo-related data, create chloropleth map
 
 DataWrapper is a free online service for visualizing data. 19 chart types are available as well as many resources explaining how to tell stories with data. Three types of maps can be created, next to 16 other types of visualizations. 
 
-To create a map, go to [app.datawrapper.de/create/map] and select Choropleth map.
+To create a map, go to [Datawrapper](app.datawrapper.de/create/map) and select Choropleth map.
 
 ![](images/datawrapper-chloropleth-step1.png)
 The first question that Datawrapper will ask you after you've decided on a choropleth map, is: "What type of map do you want to create?" 
@@ -280,7 +280,7 @@ Check out websites
 
 * The Open Data Network - https://www.opendatanetwork.com/ - portal to find datasets from among 10Ks of public open data sets.
 * GISCO - the Geographic Information System of the COmmission - localise, analyse, visualise: https://ec.europa.eu/eurostat/web/gisco/geodata/reference-data . Within Eurostat, GISCO is responsible for meeting the European Commission's geographical information needs at 3 levels: the European Union, its member countries, and its regions.
-* PDOK - Dutch open government data with current geo-information: Bij PDOK vind je open datasets van de overheid met actuele geo-informatie. Deze datasets zijn benaderbaar via geo webservices en beschikbaar als downloads. https://app.pdok.nl/viewer
+* PDOK - Dutch open government data with current geo-information: Bij [PDOK](https://www.pdok.nl/) vind je open datasets van de overheid met actuele geo-informatie. Deze datasets zijn benaderbaar via geo webservices en beschikbaar als downloads. Met de [PDOK download viewer](https://app.pdok.nl/viewer) kan je op een kaart van Nederland een polygon tekenen en voor dat gebied één of meerdere soorten data gerelateerd aan dat gebied downloaden.
 * UNdata - https://data.un.org/ - a world of information - data sets from United Nations on population, refugees, economy, education, labor, trade, energy, crime, health, science, environment, communication, transport and tourism.
 * Natural Earth is a public domain map dataset available at 1:10m, 1:50m, and 1:110 million scales. Featuring tightly integrated vector and raster data, with Natural Earth you can make a variety of visually pleasing, well-crafted maps with cartography or GIS software. Both vector (Shapefiles) and raster (TIFF) files.   https://www.naturalearthdata.com/ Some examples: countries, regions, cities, parks, administrative units. And: Coastline, rivers, reefs, bathymetry (deepness). Raster: elevation, bathymetry, gray-tone, relief, natural earth.
 * Copernicus - Satellite imagery available as raster (WMS/WMTS) - https://www.copernicus.eu/en/accessing-data-where-and-how/copernicus-services-catalogue -  
@@ -354,6 +354,10 @@ Edit mode - check the Edit Mode checkbox in the left bottom corner:
 * Edit Marker/Site/Tooltip - click on marker to bring up editor
 
 Add custom map layer of tiled map service, for example of WARP-ed images/maps such as https://mapwarper.net/maps/tile/80272/{z}/{x}/{y}.png
+
+Export your map with current sites/markers and associated images - Right Mouse Click on Map, choose menu item Configure Map.
+Import your map with all its sites/markers and associated images into any browser - Right Mouse Click on Map, choose menu item Configure Map.
+
 
 
 ## 7. First steps with Leaflet - integrating a map in a web application
